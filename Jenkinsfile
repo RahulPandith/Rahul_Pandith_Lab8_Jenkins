@@ -5,14 +5,14 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the project for PES1UG22CS462...'
-                sh 'g++ -o output program.cpp' // Compile your C++ file
+                sh 'g++ -o output CC_TA/main/hello.cpp' // Use hello.cpp instead of program.cpp
             }
         }
 
         stage('Test') {
             steps {
                 echo 'Running tests for PES1UG22CS462...'
-                sh './output' // Execute compiled file
+                sh './output' // Run compiled file
             }
         }
 
