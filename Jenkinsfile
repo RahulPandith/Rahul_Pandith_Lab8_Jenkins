@@ -5,8 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the project for PES1UG22CS462...'
-                sh 'ls -R'  // Debug: Show all files inside Jenkins workspace
-                sh 'g++ -o output CC_TA/main/hello.cpp'  // Corrected path
+                sh 'ls -R'  // Debugging: Show all files in workspace
+                sh 'g++ -o output main/hello.cpp'  // Correct path
             }
         }
 
