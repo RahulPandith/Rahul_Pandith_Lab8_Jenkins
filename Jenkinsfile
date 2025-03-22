@@ -5,7 +5,8 @@ pipeline {
         stage('Build') {
             steps {
                 echo 'Building the project for PES1UG22CS462...'
-                sh 'g++ -o output CC_TA/main/hello.cpp' // Use hello.cpp instead of program.cpp
+                sh 'ls -R'  // Debug: Show all files inside Jenkins workspace
+                sh 'g++ -o output CC_TA/main/hello.cpp'  // Corrected path
             }
         }
 
@@ -19,7 +20,7 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying the project for PES1UG22CS462...'
-                sh 'echo "Deployment successful for PES1UG22CS462!"' // Simulated deployment
+                sh 'echo "Deployment successful for PES1UG22CS462!"'
             }
         }
     }
